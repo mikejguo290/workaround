@@ -1,5 +1,6 @@
 // TODO: Add your import statements here.
-
+// part 2. import two named functions from salaryData.js
+import {getRoles, getCompanies} from '../modules/salaryData.js'
 // TODO: Get the companies and roles using the salaryData module.
 const companies = [];
 const roles = [];
