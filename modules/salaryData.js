@@ -29,6 +29,10 @@ const salaryData = [
     return salaryData.filter(obj => obj.company === company);
   }
   
+  // part 1.a Export four functions above using ES6 named syntax.
+  export {getRoles, getCompanies, getDataByRole, getDataByCompany}
   
+  // part 1.b Export as default the salaryData. 
+  export default salaryData 
   
   
