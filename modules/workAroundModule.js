@@ -1,5 +1,7 @@
 // Add your imports here.
-
+// part 5. import named functions from salaryData.js, and import salaryData with default import
+import {getDataByRole, getDataByCompany} from './salaryData.js'
+import salaryData from './salaryData.js'
 // Replace the empty array with the appropriate imported function/value
 const getAverageSalaryByRole = role => {
     const roleData = [];
@@ -16,7 +18,7 @@ const getAverageSalaryByRole = role => {
   
   // Replace the empty array with the appropriate imported function/value
   const getSalaryAtCompany = (role, company) => {
-    const companyData = [];
+    const companyData = []];
     const roleAtCompany = companyData.find(obj => obj.role === role);
     return roleAtCompany.salary;
   }
