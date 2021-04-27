@@ -2,6 +2,8 @@
 // part 2. import two named functions from salaryData.js
 import {getRoles, getCompanies} from './modules/salaryData.js'
 
+// part 8. import four named functions from workAroundModule.js
+import {getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary} from './modules/workAroundModule.js'
 // TODO: Get the companies and roles using the salaryData module.
 // part 3. replace empty arrays below with imported named functions. 
 const companies = getCompanies();
