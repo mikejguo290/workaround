@@ -50,6 +50,8 @@ function renderInputButtons(labels, groupName) {
 }
 
 function updateResults(){
+  // updateResults(). This function is called any time the user selects one of the radio input elements.
+
   // Get the current selected company and role from the radio button inputs.
   const company = document.querySelector("input[name='company']:checked").value;
   const role = document.querySelector("input[name='role']:checked").value;
@@ -58,10 +60,10 @@ function updateResults(){
   if (!company || !role) { return; }
 
   // TODO: Use the workAroundModule functions to calculate the needed data.
-  const averageSalaryByRole = 0;
-  const averageSalaryByCompany = 0;
-  const salary = 0;
-  const industryAverageSalary = 0;
+  const averageSalaryByRole = getAverageSalaryByRole(role);
+  const averageSalaryByCompany = getAverageSalaryByCompany(company);
+  const salary = getSalaryAtCompany(role, company);
+  const industryAverageSalary = getIndustryAverageSalary();
 
   // Render them to the screen.
   document.getElementById('salarySelected').innerText = `The salary for ${role}s at ${company} is \$${salary}`;
