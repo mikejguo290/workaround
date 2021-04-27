@@ -4,6 +4,10 @@ import {getRoles, getCompanies} from './modules/salaryData.js'
 
 // part 8. import four named functions from workAroundModule.js
 import {getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary} from './modules/workAroundModule.js'
+
+// part 10 import formatNumber() from utilities.js
+import {formatNumber} from './modules/utilities.js'
+
 // TODO: Get the companies and roles using the salaryData module.
 // part 3. replace empty arrays below with imported named functions. 
 const companies = getCompanies();
@@ -60,10 +64,10 @@ function updateResults(){
   if (!company || !role) { return; }
 
   // TODO: Use the workAroundModule functions to calculate the needed data.
-  const averageSalaryByRole = getAverageSalaryByRole(role);
-  const averageSalaryByCompany = getAverageSalaryByCompany(company);
-  const salary = getSalaryAtCompany(role, company);
-  const industryAverageSalary = getIndustryAverageSalary();
+  const averageSalaryByRole = formatNumber(getAverageSalaryByRole(role));
+  const averageSalaryByCompany = formatNumber(getAverageSalaryByCompany(company));
+  const salary = formatNumber(getSalaryAtCompany(role, company));
+  const industryAverageSalary = formatNumber(getIndustryAverageSalary());
 
   // Render them to the screen.
   document.getElementById('salarySelected').innerText = `The salary for ${role}s at ${company} is \$${salary}`;
